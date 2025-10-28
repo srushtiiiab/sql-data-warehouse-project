@@ -1,71 +1,81 @@
-**Data Warehouse and Analytics Project**
+# Data Warehouse and Analytics Project
 
-Building a modern data warehouse with PostgreSQL, including ETL processes, data modeling, and analytics.
 This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
 
-**🏗️ Data Architecture**
+---
+## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers:
-![data_architecture (1)-1](https://github.com/user-attachments/assets/ca3414c6-a279-4a1d-bd64-bb7346ed14e1)
+The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+![data_architecture (1)-1](https://github.com/user-attachments/assets/04fcc65e-0a52-47df-a5c1-4dd76c9f5cdc)
 
-1.**Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
 
-2.**Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
+2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
 
-3.**Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
-
-**📖 Project Overview**
+---
+## 📖 Project Overview
 
 This project involves:
 
-1.**Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
+1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
+2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
+3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
+4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
 
-2.**ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
+---
+## 🚀 Project Requirements
 
-3.**Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
+### Building the Data Warehouse (Data Engineering)
 
-4.**Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+#### Objective
+Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
-**🚀 Project Requirements**
+#### Specifications
+- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
+- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
+- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
+- **Scope**: Focus on the latest dataset only; historization of data is not required.
+- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
 
-**Building the Data Warehouse (Data Engineering)**
+---
 
-**Objective**
+### BI: Analytics & Reporting (Data Analysis)
 
-Develop a modern data warehouse using PostgresSQL to consolidate sales data, enabling analytical reporting and informed decision-making.
+#### Objective
+Develop SQL-based analytics to deliver detailed insights into:
+- **Customer Behavior**
+- **Product Performance**
+- **Sales Trends**
 
-**Specifications**
+These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
 
-*Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
+For more details, refer to [docs/requirements.md](docs/requirements.md).
 
-*Data Quality: Cleanse and resolve data quality issues prior to analysis.
-
-*Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
-
-*Scope: Focus on the latest dataset only; historization of data is not required.
-
-*Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-
-**BI: Analytics & Reporting (Data Analysis)**
-
-**Objective**
-
-*Develop SQL-based analytics to deliver detailed insights into:
-
-*Customer Behavior
-
-*Product Performance
-
-*Sales Trends
-
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
-
-For more details, refer to docs/requirements.md.
-
-**📂 Repository Structure**
-
-<img width="788" height="484" alt="Screenshot 2025-10-29 at 1 32 13 AM" src="https://github.com/user-attachments/assets/8066d021-c6c1-4cf2-9e49-1094fd95c8f0" />
-
-
-
-
+## 📂 Repository Structure
+```
+data-warehouse-project/
+│
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+│
+├── docs/                               # Project documentation and architecture details
+│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
+│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
+│   ├── data_models.drawio              # Draw.io file for data models (star schema)
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+│
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
+│
+├── tests/                              # Test scripts and quality files
+│
+├── README.md                           # Project overview and instructions
+├── LICENSE                             # License information for the repository
+├── .gitignore                          # Files and directories to be ignored by Git
+└── requirements.txt                    # Dependencies and requirements for the project
+```
+---
