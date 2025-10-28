@@ -50,13 +50,13 @@ Develop a modern data warehouse using PostgresSQL to consolidate sales data, ena
 
 **Objective**
 
-Develop SQL-based analytics to deliver detailed insights into:
+*Develop SQL-based analytics to deliver detailed insights into:
 
-Customer Behavior
+*Customer Behavior
 
-Product Performance
+*Product Performance
 
-Sales Trends
+*Sales Trends
 
 These insights empower stakeholders with key business metrics, enabling strategic decision-making.
 
